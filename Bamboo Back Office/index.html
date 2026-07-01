@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Bamboo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen" class="screen">
+    <div class="login-card">
+      <div class="login-title">Team Bamboo</div>
+      <div class="login-sub">Sign in to your portal</div>
+      <label>Name</label>
+      <input type="text" id="login-name" placeholder="Your name">
+      <label>Password</label>
+      <input type="password" id="login-password" placeholder="Password">
+      <button id="login-btn" onclick="handleLogin()">Sign In</button>
+      <div id="login-error" class="login-error"></div>
+    </div>
+  </div>
+
+  <!-- APP SHELL (hidden until logged in) -->
+  <div id="app-screen" class="screen" style="display:none;">
+    <div class="topbar">
+      <div class="topbar-brand">Team Bamboo</div>
+      <div class="topbar-user">
+        <span id="user-name-label"></span>
+        <button class="signout-btn" onclick="handleSignOut()">Sign Out</button>
+      </div>
+    </div>
+    <div id="content" class="content">
+      <!-- Home dashboard renders here -->
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
